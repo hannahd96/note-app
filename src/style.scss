@@ -1,0 +1,11 @@
+// SASS File
+$myColor:'red'; 
+$myText: 'uppercase';
+
+h1{
+    color:myColor;
+}
+
+.test{
+    text-transform: $myText;
+}
