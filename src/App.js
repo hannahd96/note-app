@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
      <nav className="navbar navbar-light bg-light">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="https://github.com/Automattic/mongoose/issues/8156">
           <span><img className="navbar-logo" alt="logo" src={Logo}/></span>
           <span id="brand-text">Notes</span>
             <button className="btn btn-outline-success" id="create-btn">Create</button>
@@ -19,19 +19,19 @@ function App() {
             <nav id="sidebar">
                 <ul className="list-unstyled components">
                   <li className="active">
-                    <a href="#">Groceries<img src={arrow} alt="arrow" className="arrow"></img></a>
+                    <p>Groceries<img src={arrow} alt="arrow" className="arrow"></img></p>
                   </li>
                   <li>
-                      <a href="#">Todos<img src={arrow} alt="arrow" className="arrow"></img></a>
+                  <p>Todos<img src={arrow} alt="arrow" className="arrow"></img></p>
                   </li>
                   <li>
-                      <a href="#">Book Titles<img src={arrow} alt="arrow" className="arrow"></img></a>
+                  <p>Conference Details<img src={arrow} alt="arrow" className="arrow"></img></p>
                   </li>
                   <li>
-                      <a href="#">Conference Details<img src={arrow} alt="arrow" className="arrow"></img></a>
+                  <p>Contacts<img src={arrow} alt="arrow" className="arrow"></img></p>
                   </li>
                   <li>
-                      <a href="#">Meeting Feedback<img src={arrow} alt="arrow" className="arrow"></img></a>
+                  <p>Holiday Destinations<img src={arrow} alt="arrow" className="arrow"></img></p>
                   </li>
                 </ul>
             </nav>
