@@ -1,43 +1,27 @@
 import React from 'react';
-import Logo from "./images/logo.png";
-import arrow from "./images/arrow-img.png"
+// import Logo from "./images/logo.png";
+// import arrow from "./images/arrow-img.png"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import './style.scss';
 
+import Navbar from "./components/navbar.component";
+import NotesList from "./components/notes-list.component";
+import EditNote from "./components/edit-note.component";
+import CreateNote from "./components/create-note.component";
+import CreateUser from "./components/create-user.component";
+
 function App() {
   return (
-    <div className="App">
-     <nav className="navbar navbar-light bg-light">
-        <a className="navbar-brand" href="https://github.com/Automattic/mongoose/issues/8156">
-          <span><img className="navbar-logo" alt="logo" src={Logo}/></span>
-          <span id="brand-text">Notes</span>
-            <button className="btn btn-outline-success" id="create-btn">Create</button>
-        </a>
-      </nav>
-      <div className="col-sm-3">
-        <div className="wrapper">
-            <nav id="sidebar">
-                <ul className="list-unstyled components">
-                  <li className="active">
-                    <p>Groceries<img src={arrow} alt="arrow" className="arrow"></img></p>
-                  </li>
-                  <li>
-                  <p>Todos<img src={arrow} alt="arrow" className="arrow"></img></p>
-                  </li>
-                  <li>
-                  <p>Conference Details<img src={arrow} alt="arrow" className="arrow"></img></p>
-                  </li>
-                  <li>
-                  <p>Contacts<img src={arrow} alt="arrow" className="arrow"></img></p>
-                  </li>
-                  <li>
-                  <p>Holiday Destinations<img src={arrow} alt="arrow" className="arrow"></img></p>
-                  </li>
-                </ul>
-            </nav>
-        </div>
-      </div>
-    </div>
+        <Router>
+          <Navbar />
+          <br></br>
+          <Route path="/" exact component= { NotesList } />
+          <Route path="/edit/:id" component = { EditNote } />
+          <Route path="/create" component = { CreateNote } />
+          <Route path="/user" component = { CreateUser } />
+        </Router>
   );
 }
 
