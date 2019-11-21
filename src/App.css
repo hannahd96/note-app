@@ -1,3 +1,11 @@
+.navbar {
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.btn {
+  margin: 0px 15px 0px 4px;
+}
+
 .navbar-logo {
   height:26px; 
   width:25px;
@@ -5,7 +13,21 @@
 
 .navbar-brand{
   padding:10px;
+  position: inline;
 }
+
+#nav-logo{
+  width:30px;
+  height:30px;
+  margin: 0px 5px 0px 0px;
+}
+
+#user-icon{
+  width:w0px;
+  height:20px;
+  padding-right:3px;
+}
+
 
 #brand-text{
   text-decoration: none;
@@ -21,41 +43,6 @@ a, a:hover, a:focus {
   transition: all 0.3s;
 }
 
-#sidebar {
-  /* don't forget to add all the previously mentioned styles here too */
-  transition: all 0.3s;
-}
-
-#sidebar .sidebar-header {
-  padding: 20px;
-}
-
-#sidebar ul.components {
-  padding: 20px 0;
-}
-
-#sidebar ul p {
-  padding: 10px;
-}
-
-#sidebar ul li a {
-  padding: 10px;
-  font-size: 1.1em;
-  display: block;
-}
-#sidebar ul li a:hover {
-  background: #f3f3f3;
-}
-
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-  color: black;
-  background-color: #cccccc;
-}
-ul ul a {
-  font-size: 0.9em !important;
-  padding-left: 30px !important;
-}
-
 #create-btn{
   /* text-align:right !important;
   float: right !important; */
@@ -66,4 +53,18 @@ ul ul a {
   height:26px; 
   width:25px;
   float: right;
+}
+
+#list-item{
+  list-style-type: none;
+  /* border: 1px solid  #e6e6e6; */
+  margin:0px !important;
+}
+
+hr {
+  border: 1px solid #e6e6e6;
+}
+
+#text-box{
+  resize:none;
 }

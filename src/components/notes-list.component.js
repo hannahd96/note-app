@@ -51,7 +51,7 @@ export default class NoteList extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h3>Notes</h3>
                 <table className="table">
                     <thead className="thead-light">

@@ -67,7 +67,7 @@ export default class CreateNote extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h3>Create New Note</h3>
                 <form onSubmit = { this.onSubmit }>
                     <div className = "form-group">
@@ -100,8 +100,7 @@ export default class CreateNote extends Component {
                     </div>
                     <div className="form-group">
                         <label>Content: </label>
-                        <input 
-                            type="text"
+                        <textarea id="text-box"
                             className="form-control"
                             value={ this.state.content }
                             onChange={ this.onChangeContent }
