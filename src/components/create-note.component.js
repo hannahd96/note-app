@@ -19,7 +19,7 @@ export default class CreateNote extends Component {
     }
 
     componentDidMount() {
-     axios.get('http://localhost:5000/users/')
+     axios.get('/api/users/')
         .then(response => {
             if(response.data.length > 0) {
                this.setState({
@@ -59,7 +59,7 @@ export default class CreateNote extends Component {
 
         console.log(note);
 
-        axios.post('http://localhost:5000/notes/add', note)
+        axios.post('/api/notes/add', note)
             .then(res => console.log(res.data));
         
         window.location = '/';

@@ -24,7 +24,7 @@ export default class NoteList extends Component {
     }   
     
     componentDidMount(){
-        axios.get('http://localhost:5000/notes/')
+        axios.get('/api/notes/')
             .then(response => {
                 this.setState({ notes: response.data });
             })
@@ -34,7 +34,7 @@ export default class NoteList extends Component {
     }
 
     deleteNote(id) {
-        axios.delete('http://localhost:5000/notes/' + id)
+        axios.delete('/api/notes/' + id)
             .then(res => console.log(res.data));
 
         this.setState({

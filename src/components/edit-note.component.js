@@ -19,7 +19,7 @@ export default class EditNotes extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:5000/notes/' + this.props.match.params.id)
+        axios.get('/api/notes/' + this.props.match.params.id)
             .then(response => {
                 this.setState({
                     username: response.data.username,
@@ -31,7 +31,7 @@ export default class EditNotes extends Component {
                 console.log(error);
             })
 
-        axios.get('http://localhost:5000/users/')
+        axios.get('api/users/')
             .then(response => {
                 if(response.data.length > 0){
                     this.setState({
@@ -70,7 +70,7 @@ export default class EditNotes extends Component {
         
         console.log(note);
 
-        axios.post('http://localhost:5000/notes/update/' + this.props.match.params.id, note)
+        axios.post('api/notes/update/' + this.props.match.params.id, note)
             .then(res => console.log(res.data));
 
         window.location = '/';
